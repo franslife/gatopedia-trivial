@@ -338,7 +338,7 @@ h2 {
 
 .primary-button,
 .secondary-button,
-.round-button,
+.restart-button,
 .answer-button,
 .lifeline-button {
   border: 0;
@@ -375,15 +375,19 @@ h2 {
   font-size: clamp(2rem, 8vw, 4rem);
 }
 
-.round-button {
-  display: grid;
-  width: 52px;
-  height: 52px;
+.restart-button {
+  min-width: 116px;
+  min-height: 46px;
   flex: 0 0 auto;
-  place-items: center;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.14);
+  padding: 0 18px;
+  box-shadow: 0 12px 28px rgba(20, 9, 33, 0.18);
+}
+
+.restart-button:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .hud {
@@ -680,6 +684,25 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.13);
+}
+
+.next-question-button {
+  width: 100%;
+  min-height: 56px;
+  margin-top: 14px;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 999px;
+  color: #10221d;
+  background: linear-gradient(135deg, var(--mint), var(--good));
+  box-shadow: 0 10px 0 rgba(18, 112, 78, 0.55), 0 22px 34px rgba(87, 226, 190, 0.25);
+  cursor: pointer;
+  font-weight: 950;
+}
+
+.next-question-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 6px 0 rgba(18, 112, 78, 0.55), 0 14px 24px rgba(87, 226, 190, 0.2);
 }
 
 .result-screen {
