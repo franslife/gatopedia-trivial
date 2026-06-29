@@ -475,6 +475,7 @@ const els = {
   categoryLabel: document.querySelector("#categoryLabel"),
   difficultyLabel: document.querySelector("#difficultyLabel"),
   questionText: document.querySelector("#questionText"),
+  inlineHint: document.querySelector("#inlineHint"),
   answersGrid: document.querySelector("#answersGrid"),
   categoryTrack: document.querySelector("#categoryTrack"),
   knowledgeText: document.querySelector("#knowledgeText"),
@@ -528,9 +529,11 @@ function createGame() {
 function startGame() {
   clearTimer();
   game = createGame();
+  screens.game.classList.remove("feedback-open");
   showScreen("game");
   renderQuestion();
   startTimer();
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function showScreen(name) {
@@ -542,6 +545,7 @@ function renderQuestion() {
   const current = getCurrentQuestion();
   game.answered = false;
   game.timeLeft = secondsPerQuestion;
+  screens.game.classList.remove("feedback-open");
 
   els.scoreValue.textContent = format(game.score);
   els.streakValue.textContent = game.streak;
@@ -553,6 +557,8 @@ function renderQuestion() {
   els.feedbackBox.className = "feedback-box is-waiting";
   els.feedbackBox.textContent = "Esperando respuesta";
   els.nextButton.classList.add("is-hidden");
+  els.inlineHint.classList.add("is-hidden");
+  els.inlineHint.textContent = "";
   els.answersGrid.innerHTML = "";
 
   current.shuffledAnswers.forEach((answer, index) => {
@@ -659,6 +665,7 @@ function answerQuestion(selectedIndex) {
   els.knowledgeText.textContent = current.explanation;
   els.nextButton.textContent = game.index === totalQuestions - 1 ? "Ver resultado" : "Siguiente pregunta";
   els.nextButton.classList.remove("is-hidden");
+  screens.game.classList.add("feedback-open");
 }
 
 function nextQuestion() {
@@ -670,6 +677,7 @@ function nextQuestion() {
 
   renderQuestion();
   startTimer();
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function useFifty() {
@@ -692,7 +700,10 @@ function useFifty() {
 function useHint() {
   if (!game.lifelines.hint || game.answered) return;
   game.lifelines.hint = false;
-  els.knowledgeText.textContent = getCurrentQuestion().hint;
+  const hint = getCurrentQuestion().hint;
+  els.knowledgeText.textContent = hint;
+  els.inlineHint.textContent = `Pista: ${hint}`;
+  els.inlineHint.classList.remove("is-hidden");
   els.feedbackBox.className = "feedback-box is-waiting";
   els.feedbackBox.textContent = "Pista activada";
   els.hintButton.disabled = true;
