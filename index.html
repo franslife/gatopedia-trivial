@@ -81,6 +81,17 @@
           <div class="floating-card card-five">...</div>
         </div>
 
+        <aside class="desktop-partners" aria-label="Créditos destacados">
+          <a class="partner-link creativity" href="https://creatividadtecnologica.com/" target="_blank" rel="noopener noreferrer">
+            <span>Created by</span>
+            <img src="assets/creatividad-tecnologica.png" alt="Creatividad Tecnológica">
+          </a>
+          <a class="partner-link cats" href="https://lavegacats.com/" target="_blank" rel="noopener noreferrer">
+            <span>Inspirado en la labor de</span>
+            <img src="assets/la-vega-cats.png" alt="La Vega Cats">
+          </a>
+        </aside>
+
         <div class="glass-panel intro-panel">
           <h1>Gatopedia: Trivial Felino</h1>
           <p class="lead">
@@ -118,6 +129,17 @@
               volver a jugar con nuevas preguntas mezcladas.
             </p>
           </div>
+
+          <aside class="mobile-partners" aria-label="Créditos destacados">
+            <a class="mobile-partner-link creativity" href="https://creatividadtecnologica.com/" target="_blank" rel="noopener noreferrer">
+              <span>Created by</span>
+              <img src="assets/creatividad-tecnologica.png" alt="Creatividad Tecnológica">
+            </a>
+            <a class="mobile-partner-link cats" href="https://lavegacats.com/" target="_blank" rel="noopener noreferrer">
+              <span>Inspirado en</span>
+              <img src="assets/la-vega-cats.png" alt="La Vega Cats">
+            </a>
+          </aside>
         </div>
       </section>
 
@@ -223,11 +245,51 @@
 
           <div class="result-actions">
             <button id="playAgainButton" class="primary-button" type="button">Jugar otra vez</button>
+            <button id="creditsButton" class="secondary-button credits-trigger" type="button">Quién está detrás</button>
             <button id="homeButton" class="secondary-button" type="button">Volver al inicio</button>
           </div>
         </div>
       </section>
+
     </main>
+
+    <section id="creditsModal" class="credits-modal is-hidden" aria-labelledby="creditsTitle" aria-modal="true" role="dialog">
+      <div class="credits-backdrop" data-close-credits></div>
+      <article class="glass-panel credits-dialog">
+        <button class="credits-close" type="button" aria-label="Cerrar créditos" data-close-credits>×</button>
+        <h1 id="creditsTitle">Créditos</h1>
+
+        <div class="credits-block center">
+          <h2>Desarrollo y dirección creativa</h2>
+          <img class="credits-logo creativity" src="assets/creatividad-tecnologica.png" alt="Creatividad Tecnológica">
+          <p>
+            Concepto, diseño, dirección creativa, experiencia de usuario, desarrollo e
+            integración de tecnologías interactivas.
+          </p>
+          <p>
+            Creado con la pasión de acercar el conocimiento, la tecnología y el bienestar
+            animal a través de experiencias digitales innovadoras.
+          </p>
+          <strong>Fran. Gonzalez</strong>
+          <a href="https://creatividadtecnologica.com/" target="_blank" rel="noopener noreferrer">creatividadtecnologica.com</a>
+        </div>
+
+        <div class="credits-block">
+          <h2>Agradecimientos</h2>
+          <p>
+            Este proyecto está inspirado en la labor de La Vega Cats, un santuario en la
+            Comunidad de Madrid dedicado al cuidado y protección de gatos.
+          </p>
+          <img class="credits-logo cats" src="assets/la-vega-cats.png" alt="La Vega Cats">
+          <p>
+            Si te apasionan los gatos y quieres conocer una labor increíble o colaborar como
+            voluntario/a, te invitamos a descubrir su historia.
+          </p>
+          <a href="https://lavegacats.com/" target="_blank" rel="noopener noreferrer">lavegacats.com</a>
+          <p class="credits-closing">Porque cada gato merece una oportunidad.</p>
+        </div>
+      </article>
+    </section>
 
     <script src="script.js"></script>
   </body>

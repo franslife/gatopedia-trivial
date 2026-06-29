@@ -490,6 +490,8 @@ const els = {
   finalScore: document.querySelector("#finalScore"),
   finalCorrect: document.querySelector("#finalCorrect"),
   finalBestStreak: document.querySelector("#finalBestStreak"),
+  creditsButtons: document.querySelectorAll(".credits-trigger"),
+  creditsModal: document.querySelector("#creditsModal"),
   reviewList: document.querySelector("#reviewList")
 };
 
@@ -507,6 +509,17 @@ els.nextButton.addEventListener("click", nextQuestion);
 els.fiftyButton.addEventListener("click", useFifty);
 els.hintButton.addEventListener("click", useHint);
 els.timeButton.addEventListener("click", useExtraTime);
+els.creditsButtons.forEach((button) => {
+  button.addEventListener("click", openCredits);
+});
+document.querySelectorAll("[data-close-credits]").forEach((control) => {
+  control.addEventListener("click", closeCredits);
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !els.creditsModal.classList.contains("is-hidden")) {
+    closeCredits();
+  }
+});
 
 function createGame() {
   return {
@@ -820,6 +833,20 @@ function format(value) {
   return new Intl.NumberFormat("es-ES").format(value);
 }
 
+function openCredits() {
+  els.creditsModal.classList.remove("is-hidden");
+  document.body.classList.add("modal-open");
+}
+
+function closeCredits() {
+  els.creditsModal.classList.add("is-hidden");
+  document.body.classList.remove("modal-open");
+}
+
 if (window.location.hash === "#jugar") {
   startGame();
+}
+
+if (window.location.hash === "#creditos") {
+  openCredits();
 }

@@ -259,6 +259,75 @@ button {
   bottom: 28px;
 }
 
+.desktop-partners {
+  display: none;
+}
+
+.mobile-partners {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.partner-link {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.mobile-partner-link {
+  display: grid;
+  min-width: 0;
+  min-height: 76px;
+  align-content: center;
+  justify-items: center;
+  padding: 10px 8px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.07);
+  text-align: center;
+  text-decoration: none;
+}
+
+.partner-link span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.64rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.mobile-partner-link span {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.62rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.partner-link img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.mobile-partner-link img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.mobile-partner-link.creativity img {
+  width: min(112px, 88%);
+  max-height: 30px;
+}
+
+.mobile-partner-link.cats img {
+  width: min(96px, 78%);
+  max-height: 30px;
+}
+
 .intro-panel,
 .result-panel {
   min-width: 0;
@@ -765,13 +834,133 @@ h2 {
   margin-top: 0;
 }
 
+.credits-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.credits-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 8, 16, 0.76);
+  backdrop-filter: blur(10px);
+}
+
+.credits-dialog {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: min(700px, calc(100vw - 36px));
+  width: min(700px, calc(100dvw - 36px));
+  max-height: min(760px, calc(100vh - 36px));
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: clamp(20px, 3vw, 30px);
+}
+
+.credits-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.16);
+  cursor: pointer;
+  font-size: 1.45rem;
+  font-weight: 900;
+}
+
+.credits-dialog h1 {
+  clear: both;
+  margin-bottom: 22px;
+  text-align: center;
+  font-size: clamp(2rem, 8vw, 3.8rem);
+}
+
+.credits-block {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.credits-block + .credits-block {
+  margin-top: 14px;
+}
+
+.credits-block.center {
+  text-align: center;
+}
+
+.credits-block h2 {
+  margin-bottom: 12px;
+  color: var(--amber);
+}
+
+.credits-block p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.credits-block strong {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 1.05rem;
+}
+
+.credits-block a {
+  color: #bfffee;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.credits-logo {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.credits-logo.creativity {
+  width: min(240px, 100%);
+  margin: 2px auto 14px;
+}
+
+.credits-logo.cats {
+  width: min(180px, 100%);
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.credits-closing {
+  margin: 16px 0 0;
+  color: var(--ink) !important;
+  font-weight: 900;
+}
+
 @media (min-width: 720px) {
   .game-shell {
-    padding: 28px;
+    padding: 12px 28px;
   }
 
   .intro-screen {
     grid-template-columns: 0.82fr 1.18fr;
+    align-content: center;
+    min-height: calc(100vh - 24px);
   }
 
   .feature-list,
@@ -796,6 +985,85 @@ h2 {
 }
 
 @media (min-width: 980px) {
+  .visual-stage {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    min-height: 230px;
+  }
+
+  .desktop-partners {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    width: min(360px, 86%);
+    gap: 8px;
+    align-self: start;
+    justify-self: center;
+    margin-top: 18px;
+  }
+
+  .intro-panel {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  .partner-link {
+    display: grid;
+    justify-items: center;
+    padding: 7px 10px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 24px rgba(20, 9, 33, 0.2);
+  }
+
+  .partner-link.creativity img {
+    width: min(220px, 78%);
+    max-height: 44px;
+  }
+
+  .partner-link.cats img {
+    width: min(185px, 70%);
+    max-height: 42px;
+  }
+
+  .intro-panel {
+    padding: 28px 36px;
+  }
+
+  .intro-panel h1 {
+    font-size: clamp(3.8rem, 5.8vw, 4.8rem);
+  }
+
+  .intro-panel .lead {
+    font-size: 1.04rem;
+    line-height: 1.42;
+  }
+
+  .intro-panel .primary-button {
+    min-height: 54px;
+    margin-top: 8px;
+  }
+
+  .mobile-partners {
+    display: none;
+  }
+
+  .feature-list {
+    margin: 16px 0;
+  }
+
+  .feature-list article {
+    min-height: 82px;
+    padding: 13px;
+  }
+
+  .how-card {
+    padding: 13px 15px;
+  }
+
   .play-area {
     grid-template-columns: 250px minmax(0, 1fr) 300px;
     align-items: start;
@@ -1158,6 +1426,40 @@ h2 {
   .next-question-button {
     min-height: 58px;
     font-size: 1.05rem;
+  }
+
+  .credits-modal {
+    padding: 10px;
+    place-items: center start;
+  }
+
+  .credits-dialog {
+    width: min(360px, calc(100vw - 20px)) !important;
+    width: min(360px, calc(100dvw - 20px)) !important;
+    max-width: min(360px, calc(100vw - 20px)) !important;
+    max-width: min(360px, calc(100dvw - 20px)) !important;
+    margin-left: 10px;
+    padding: 18px;
+    overflow-x: hidden;
+  }
+
+  .credits-block {
+    padding: 16px;
+    overflow: hidden;
+  }
+
+  .credits-block p {
+    overflow-wrap: anywhere;
+  }
+
+  .credits-logo.creativity {
+    width: min(150px, 62%);
+    max-height: 46px;
+  }
+
+  .credits-logo.cats {
+    width: min(118px, 52%);
+    max-height: 44px;
   }
 
   .result-stats {
