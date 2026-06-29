@@ -474,6 +474,7 @@ const els = {
   timerBar: document.querySelector("#timerBar"),
   categoryLabel: document.querySelector("#categoryLabel"),
   difficultyLabel: document.querySelector("#difficultyLabel"),
+  routeTitle: document.querySelector("#routeTitle"),
   questionText: document.querySelector("#questionText"),
   inlineHint: document.querySelector("#inlineHint"),
   answersGrid: document.querySelector("#answersGrid"),
@@ -580,6 +581,8 @@ function renderQuestion() {
 
 function renderTrack() {
   els.categoryTrack.innerHTML = "";
+  const current = getCurrentQuestion();
+  els.routeTitle.textContent = `Ruta gatuna · ${game.index + 1}/${totalQuestions} · ${current.category}`;
   game.questions.forEach((question, index) => {
     const item = document.createElement("div");
     item.className = "track-item";
