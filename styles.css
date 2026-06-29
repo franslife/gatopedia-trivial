@@ -244,6 +244,11 @@ button {
 }
 
 .card-three {
+  right: 32px;
+  top: 36px;
+}
+
+.card-four {
   left: 50%;
   bottom: 24px;
   transform: translateX(-50%);
@@ -821,6 +826,11 @@ h2 {
   }
 
   .card-three {
+    right: 18px;
+    top: 24px;
+  }
+
+  .card-four {
     bottom: 24px;
   }
 
