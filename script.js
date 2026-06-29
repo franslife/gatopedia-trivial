@@ -201,6 +201,258 @@ const bank = [
     correct: 0,
     hint: "Busca control ético y estable.",
     explanation: "El método CER ayuda a controlar poblaciones, mejorar bienestar y reducir camadas, siempre con coordinación local y seguimiento."
+  },
+  {
+    category: "Veterinario",
+    difficulty: "Media",
+    question: "¿Por qué conviene pesar a un gato con cierta regularidad?",
+    answers: [
+      "Porque los cambios de peso pueden avisar de problemas de salud",
+      "Porque todos los gatos deben pesar exactamente lo mismo",
+      "Porque sustituye a las vacunas",
+      "Porque impide que tire arena fuera del arenero"
+    ],
+    correct: 0,
+    hint: "El peso cuenta una parte importante de la historia clínica.",
+    explanation: "Una pérdida o subida de peso sin explicación puede relacionarse con dolor, estrés, diabetes, problemas renales, tiroides u otras enfermedades."
+  },
+  {
+    category: "Veterinario",
+    difficulty: "Difícil",
+    question: "¿Qué dato es especialmente útil contar al veterinario ante un cambio de conducta?",
+    answers: [
+      "Desde cuándo ocurre, frecuencia, apetito, agua, arenero y cambios en casa",
+      "Solo si el gato sigue siendo bonito",
+      "El color favorito del tutor",
+      "La marca de la televisión de casa"
+    ],
+    correct: 0,
+    hint: "Cuanto más concreto sea el contexto, mejor.",
+    explanation: "Los detalles sobre rutina, eliminación, apetito, sed y cambios ambientales ayudan a orientar el diagnóstico y decidir pruebas."
+  },
+  {
+    category: "Convivencia",
+    difficulty: "Media",
+    question: "¿Qué recurso conviene duplicar cuando conviven varios gatos?",
+    answers: [
+      "Areneros, comederos, bebederos, camas y zonas de descanso",
+      "El ruido de la casa",
+      "Los castigos",
+      "La obligación de dormir juntos"
+    ],
+    correct: 0,
+    hint: "Compartir por obligación genera tensión.",
+    explanation: "En hogares multigato suele recomendarse repartir recursos para evitar competencia y permitir que cada gato elija espacios seguros."
+  },
+  {
+    category: "Convivencia",
+    difficulty: "Difícil",
+    question: "¿Qué señal puede indicar que dos gatos necesitan una presentación más lenta?",
+    answers: [
+      "Bufidos persistentes, persecuciones, bloqueo de recursos o escondites prolongados",
+      "Dormir en habitaciones distintas algunas veces",
+      "Beber agua en momentos diferentes",
+      "Mirar por la ventana"
+    ],
+    correct: 0,
+    hint: "Observa tensión sostenida, no preferencias normales.",
+    explanation: "Si hay miedo, acoso o bloqueo de recursos, conviene volver atrás, separar espacios y reintroducir con sesiones más cortas y positivas."
+  },
+  {
+    category: "Cuidados",
+    difficulty: "Media",
+    question: "¿Qué rutina ayuda a prevenir bolas de pelo en gatos de pelo largo?",
+    answers: [
+      "Cepillado frecuente adaptado al tipo de manto",
+      "Quitar todos los rascadores",
+      "No dejar que se acicalen",
+      "Bañarlos con champú humano cada día"
+    ],
+    correct: 0,
+    hint: "La prevención empieza con el manto.",
+    explanation: "El cepillado reduce pelo muerto, nudos y bolas de pelo. La frecuencia depende del pelaje, edad y tolerancia del gato."
+  },
+  {
+    category: "Cuidados",
+    difficulty: "Fácil",
+    question: "¿Qué debería tener una habitación segura para un gato recién llegado?",
+    answers: [
+      "Arenero, agua, comida, escondite, cama y tranquilidad",
+      "Acceso inmediato a toda la casa sin refugio",
+      "Música muy alta para que se acostumbre",
+      "Solo una caja vacía sin recursos"
+    ],
+    correct: 0,
+    hint: "Menos estímulos al principio suele ayudar.",
+    explanation: "Una habitación base permite que el gato explore poco a poco, coma, use el arenero y gane confianza sin sentirse invadido."
+  },
+  {
+    category: "Urgencias",
+    difficulty: "Difícil",
+    question: "¿Por qué la dificultad para orinar puede ser grave en un gato macho?",
+    answers: [
+      "Porque una obstrucción urinaria puede poner en riesgo su vida",
+      "Porque significa que ya no necesita agua",
+      "Porque siempre se arregla cambiando la arena",
+      "Porque solo quiere llamar la atención"
+    ],
+    correct: 0,
+    hint: "Si no puede orinar, no esperes.",
+    explanation: "Una obstrucción urinaria puede avanzar rápido y requiere atención veterinaria urgente, especialmente si hay dolor, intentos repetidos o decaimiento."
+  },
+  {
+    category: "Urgencias",
+    difficulty: "Media",
+    question: "¿Qué conviene hacer si un gato deja de comer durante un día completo?",
+    answers: [
+      "Consultar con un veterinario, sobre todo si hay otros síntomas",
+      "Esperar siempre una semana",
+      "Forzarle chocolate para darle energía",
+      "Quitarle el agua"
+    ],
+    correct: 0,
+    hint: "En gatos, no comer no es un detalle menor.",
+    explanation: "La falta de apetito puede tener muchas causas y en gatos puede complicarse. Si se prolonga o hay apatía, vómitos o dolor, hay que consultar."
+  },
+  {
+    category: "Seguridad",
+    difficulty: "Fácil",
+    question: "¿Qué objeto doméstico puede ser peligroso para un gato curioso?",
+    answers: [
+      "Cordones, hilos, gomas, productos de limpieza y algunas plantas",
+      "Un rascador estable",
+      "Una fuente de agua limpia",
+      "Una cama lavable"
+    ],
+    correct: 0,
+    hint: "Lo pequeño o tóxico puede acabar en la boca.",
+    explanation: "Hilos, gomas y cuerdas pueden causar problemas digestivos si se ingieren. Productos químicos y plantas tóxicas deben quedar fuera de alcance."
+  },
+  {
+    category: "Seguridad",
+    difficulty: "Media",
+    question: "¿Qué es una buena práctica con el transportín?",
+    answers: [
+      "Dejarlo accesible en casa para que no solo aparezca en visitas al veterinario",
+      "Sacarlo solo cuando toca una experiencia estresante",
+      "Usarlo como castigo",
+      "Elegir uno sin ventilación"
+    ],
+    correct: 0,
+    hint: "Que no sea sinónimo de susto.",
+    explanation: "Si el transportín forma parte del entorno, con manta y premios, el gato puede aceptarlo mejor y viajar con menos estrés."
+  },
+  {
+    category: "Comportamiento",
+    difficulty: "Media",
+    question: "¿Qué puede significar que un gato amase una manta con las patas?",
+    answers: [
+      "Suele ser una conducta de confort o relajación",
+      "Siempre indica agresividad",
+      "Significa que odia la manta",
+      "Es una urgencia veterinaria por sí sola"
+    ],
+    correct: 0,
+    hint: "Muchas conductas vienen de etapas tempranas.",
+    explanation: "Amasar suele asociarse a bienestar, vínculo o relajación. Hay que interpretarlo junto al resto del lenguaje corporal."
+  },
+  {
+    category: "Comportamiento",
+    difficulty: "Difícil",
+    question: "¿Qué enfoque suele funcionar mejor ante arañazos en muebles?",
+    answers: [
+      "Ofrecer rascadores atractivos y redirigir la conducta",
+      "Castigar al gato después de horas",
+      "Cortarle los bigotes",
+      "Eliminar todo el juego"
+    ],
+    correct: 0,
+    hint: "Rascar es normal; la clave es dónde.",
+    explanation: "Rascar sirve para marcar, estirar y mantener uñas. Rascadores firmes, bien ubicados y refuerzo positivo son más eficaces que castigos."
+  },
+  {
+    category: "Salud",
+    difficulty: "Media",
+    question: "¿Qué señal dental merece revisión veterinaria?",
+    answers: [
+      "Mal aliento persistente, encías rojas, dolor al comer o sarro evidente",
+      "Dormir en una caja",
+      "Jugar con una pelota",
+      "Ronronear al recibir caricias"
+    ],
+    correct: 0,
+    hint: "La boca también duele.",
+    explanation: "Los problemas dentales pueden causar dolor, infección y pérdida de apetito. Revisar la boca forma parte del cuidado preventivo."
+  },
+  {
+    category: "Salud",
+    difficulty: "Difícil",
+    question: "¿Por qué un gato mayor suele necesitar controles más frecuentes?",
+    answers: [
+      "Porque aumenta el riesgo de problemas renales, tiroideos, dentales o articulares",
+      "Porque deja de necesitar comida equilibrada",
+      "Porque ya no puede tener dolor",
+      "Porque no hace falta observar cambios"
+    ],
+    correct: 0,
+    hint: "La edad cambia las prioridades.",
+    explanation: "En gatos senior, analíticas, control de peso, presión arterial y revisión dental ayudan a detectar enfermedades comunes de forma temprana."
+  },
+  {
+    category: "Adopción",
+    difficulty: "Difícil",
+    question: "¿Qué pregunta deberías hacerte antes de adoptar un segundo gato?",
+    answers: [
+      "Si tengo espacio, recursos, presupuesto y plan de presentación gradual",
+      "Si el primer gato puede decidirlo en cinco minutos",
+      "Si pueden compartir todo desde el primer día",
+      "Si así jugaré menos con ellos"
+    ],
+    correct: 0,
+    hint: "Dos gatos no siempre son el doble de fácil.",
+    explanation: "Adoptar otro gato requiere recursos duplicados, paciencia, compatibilidad probable y un plan para proteger el bienestar de ambos."
+  },
+  {
+    category: "Alimentación",
+    difficulty: "Difícil",
+    question: "¿Qué debe hacerse si un gato necesita una dieta veterinaria?",
+    answers: [
+      "Seguir la pauta del veterinario y evitar mezclarla sin consultar",
+      "Combinarla con cualquier snack para que sea más divertida",
+      "Suspenderla cuando el gato parezca aburrido",
+      "Darla solo una vez al mes"
+    ],
+    correct: 0,
+    hint: "Algunas dietas son parte del tratamiento.",
+    explanation: "Las dietas veterinarias se usan para problemas concretos. Mezclarlas o cambiarlas sin control puede reducir su eficacia."
+  },
+  {
+    category: "Razas",
+    difficulty: "Difícil",
+    question: "¿Qué conviene recordar al elegir por raza?",
+    answers: [
+      "La raza orienta, pero personalidad, salud y necesidades individuales importan más",
+      "Todos los gatos de una raza son idénticos",
+      "La raza elimina la necesidad de adaptación",
+      "Los mestizos no pueden ser buenos compañeros"
+    ],
+    correct: 0,
+    hint: "No conviertas una tendencia en una regla absoluta.",
+    explanation: "Las razas tienen tendencias, pero cada gato es un individuo. Temperamento, salud, historia y entorno pesan mucho en la convivencia."
+  },
+  {
+    category: "Voluntariado",
+    difficulty: "Media",
+    question: "¿Qué habilidad puede ser muy útil en voluntariado felino además de limpiar o alimentar?",
+    answers: [
+      "Hacer buenas fotos, escribir descripciones y difundir adopciones",
+      "Prometer adopciones sin conocer al animal",
+      "Manipular gatos asustados sin formación",
+      "Ignorar los protocolos del refugio"
+    ],
+    correct: 0,
+    hint: "La visibilidad salva oportunidades.",
+    explanation: "Buenas fotos, textos honestos y difusión responsable ayudan a que los gatos adecuados lleguen a familias compatibles."
   }
 ];
 
@@ -256,7 +508,7 @@ els.timeButton.addEventListener("click", useExtraTime);
 
 function createGame() {
   return {
-    questions: shuffle(bank).slice(0, totalQuestions),
+    questions: buildQuestionSet(),
     index: 0,
     score: 0,
     correct: 0,
@@ -303,11 +555,11 @@ function renderQuestion() {
   els.nextButton.classList.add("is-hidden");
   els.answersGrid.innerHTML = "";
 
-  current.answers.forEach((answer, index) => {
+  current.shuffledAnswers.forEach((answer, index) => {
     const button = document.createElement("button");
     button.className = "answer-button";
     button.type = "button";
-    button.textContent = answer;
+    button.textContent = answer.text;
     button.addEventListener("click", () => answerQuestion(index));
     els.answersGrid.append(button);
   });
@@ -425,9 +677,9 @@ function useFifty() {
   game.lifelines.fifty = false;
   const current = getCurrentQuestion();
   const buttons = [...els.answersGrid.querySelectorAll(".answer-button")];
-  const wrongIndexes = buttons
+  const wrongIndexes = shuffle(buttons
     .map((_, index) => index)
-    .filter((index) => index !== current.correct)
+    .filter((index) => index !== current.correct))
     .slice(0, 2);
 
   wrongIndexes.forEach((index) => {
@@ -505,6 +757,42 @@ function getRank() {
 
 function getCurrentQuestion() {
   return game.questions[game.index];
+}
+
+function buildQuestionSet() {
+  const byCategory = bank.reduce((groups, question) => {
+    if (!groups.has(question.category)) groups.set(question.category, []);
+    groups.get(question.category).push(question);
+    return groups;
+  }, new Map());
+  const categories = shuffle([...byCategory.keys()]);
+  const selected = [];
+  let round = 0;
+
+  while (selected.length < totalQuestions && selected.length < bank.length) {
+    const category = categories[round % categories.length];
+    const available = shuffle(byCategory.get(category)).filter((question) => !selected.includes(question));
+    if (available.length > 0) {
+      selected.push(available[0]);
+    }
+    round += 1;
+  }
+
+  return shuffle(selected).slice(0, totalQuestions).map(prepareQuestion);
+}
+
+function prepareQuestion(question) {
+  const shuffledAnswers = shuffle(question.answers.map((text, index) => ({
+    text,
+    originalIndex: index
+  })));
+  const correct = shuffledAnswers.findIndex((answer) => answer.originalIndex === question.correct);
+
+  return {
+    ...question,
+    shuffledAnswers,
+    correct
+  };
 }
 
 function shuffle(items) {
