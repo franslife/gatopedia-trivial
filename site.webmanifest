@@ -1,0 +1,17 @@
+{
+  "name": "Gatopedia: Trivial Felino",
+  "short_name": "Gatopedia",
+  "description": "Juego de preguntas en castellano para aprender sobre gatos, razas, cuidados, adopcion, veterinario, alimentacion y voluntariado.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#17141f",
+  "theme_color": "#745cdf",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
