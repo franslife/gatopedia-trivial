@@ -240,18 +240,23 @@ button {
 
 .card-two {
   right: 24px;
-  bottom: 32px;
+  top: 28px;
 }
 
 .card-three {
-  right: 32px;
-  top: 36px;
-}
-
-.card-four {
   left: 50%;
   bottom: 24px;
   transform: translateX(-50%);
+}
+
+.card-four {
+  left: 28px;
+  bottom: 28px;
+}
+
+.card-five {
+  right: 28px;
+  bottom: 28px;
 }
 
 .intro-panel,
@@ -839,21 +844,26 @@ h2 {
   }
 
   .card-one {
-    left: 24px;
+    left: 20px;
     top: 28px;
   }
 
   .card-two {
-    right: 12px;
-    bottom: 26px;
-  }
-
-  .card-three {
     right: 18px;
     top: 24px;
   }
 
+  .card-three {
+    bottom: 24px;
+  }
+
   .card-four {
+    left: 18px;
+    bottom: 24px;
+  }
+
+  .card-five {
+    right: 18px;
     bottom: 24px;
   }
 
